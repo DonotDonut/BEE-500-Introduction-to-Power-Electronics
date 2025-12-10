@@ -1,7 +1,3 @@
-Here is a **cleaned, organized, and fully modernized GitHub README** based on your text.
-All links are cleaned, text is consistent, steps are clear, and formatting is GitHub-friendly.
-
----
 
 # 🎓 BEE 500 — Introduction to Power Electronics
 
