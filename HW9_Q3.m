@@ -8,20 +8,29 @@ den = [1 2 1];   %  s^2 + 2s + 1
 g = tf(num, den) % open loop transfer function 
 
 % graph transfer function of the uncompensated system onto bode plot
-%bode(g);
-%figure(1);
+figure(1);
+bode(g);
+title('Uncompensated System')
 
-%hold on; % hold the uncompensated system bode plot graph to compare the compensated system
 
+% PD (Proportional-Derivative)
 gc_num = [0.73 12.37];
 gc_den = 1;
 % Create a transfer function for the compensator
 gc = tf(gc_num, gc_den) % compensator transfer function
 
 % plotting compensated system 
-%bode(gc*g)
-%legend('G(s)', 'Gc(s)G(s)');
-%figure(2);
+figure(2);
+bode(gc*g)
+title('Compensated System')
+
+
+% Comparing uncompenstated System and compensated system 
+figure(3);
+bode(g, gc*g)
+legend('uncompensated', 'compenstated');
+title('Uncompenstaed vs. Compensated System Comparison')
+
 
 % comparing bandwidths 
 % closed feedback loop
